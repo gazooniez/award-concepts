@@ -1,0 +1,2253 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="color-scheme" content="dark" /><title>Supabase Award Concepts Gallery</title>
+<style>
+:root{--line:rgba(255,255,255,.08);--text:#e6eef6;--muted:#96a8bb;--green:#3ecf8e;--amber:#f59e0b;--purple:#8b5cf6;--radius:18px;--shadow:0 18px 60px rgba(0,0,0,.36);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color-scheme:dark}*{box-sizing:border-box}body{margin:0;color:var(--text);background:radial-gradient(circle at top left, rgba(62,207,142,.16), transparent 30%),radial-gradient(circle at top right, rgba(139,92,246,.12), transparent 26%),linear-gradient(180deg,#07101a,#050a12 65%,#04070b);-webkit-font-smoothing:antialiased}body::before{content:'';position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);background-size:28px 28px;opacity:.32;mask-image:linear-gradient(180deg, rgba(0,0,0,.25), transparent 75%)}.app{max-width:1560px;margin:0 auto;padding:18px 12px 24px;position:relative;z-index:1}.top,.toolbar,.panel,.footer{border:1px solid var(--line);background:rgba(10,16,25,.86);box-shadow:var(--shadow);backdrop-filter:blur(10px);border-radius:var(--radius)}.top{padding:18px 20px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:start}.brand{display:flex;gap:14px;align-items:center}.mark{width:46px;height:46px;border-radius:15px;background:linear-gradient(180deg, rgba(62,207,142,.95), rgba(33,178,107,.8));box-shadow:0 0 0 1px rgba(62,207,142,.2),0 14px 36px rgba(62,207,142,.2);position:relative}.mark:after{content:'';position:absolute;inset:11px;border-radius:11px;border:1px solid rgba(255,255,255,.34);opacity:.6}h1{margin:0;font-size:clamp(1.35rem,2.6vw,2.25rem);line-height:1.08;letter-spacing:-.03em}.sub{margin:7px 0 0;color:var(--muted);max-width:72ch}.stats{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}.stat{min-width:132px;border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:16px;padding:12px 14px}.stat b{display:block;font-size:1.1rem}.stat span{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.14em}.toolbar{margin-top:14px;padding:14px 16px;display:grid;gap:12px}.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}.search{flex:1 1 320px;position:relative}.search input{width:100%;padding:14px 16px 14px 44px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text);outline:none}.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted)}select,.toggle,.pill{border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text);border-radius:999px;padding:10px 14px}.toggle{cursor:pointer}.toggle[aria-pressed='true'],.pill[data-active='true']{border-color:rgba(62,207,142,.5);background:rgba(62,207,142,.12)}.chips{display:flex;flex-wrap:wrap;gap:8px}.pill{cursor:pointer;color:var(--muted)}.pill .count{margin-left:6px;color:#76899c}.shell{margin-top:14px;display:grid;grid-template-columns:minmax(0,1.68fr) minmax(320px,.96fr);gap:14px;align-items:start}.panel{overflow:hidden}.head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:16px 18px;border-bottom:1px solid var(--line)}.title{margin:0;font-size:1rem}.panel p,.subtle{color:var(--muted)}.mode{display:inline-flex;gap:8px;padding:4px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03)}.mode button{border:0;background:transparent;color:var(--muted);padding:9px 14px;border-radius:999px;cursor:pointer}.mode button[aria-pressed='true']{background:rgba(62,207,142,.14);color:#fff}.body{padding:16px}.bar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;color:var(--muted)}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}.card{border:1px solid var(--line);background:rgba(255,255,255,.02);border-radius:18px;overflow:hidden;padding:0;color:inherit;cursor:pointer;text-align:left;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}.card:hover{transform:translateY(-2px);border-color:rgba(62,207,142,.35);box-shadow:0 16px 40px rgba(0,0,0,.22)}.card[aria-current='true']{border-color:rgba(62,207,142,.65)}.thumb{aspect-ratio:1/1;background:#061019}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.cbody{padding:13px}.cbody h3{margin:0;font-size:.98rem;line-height:1.16}.meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px}.meta .cost{color:#d8f7ea;font-weight:600;font-size:.82rem}.meta .cat{color:var(--muted);font-size:.82rem}.cbody .chips{margin-top:10px}.chip{display:inline-flex;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:999px;padding:6px 10px;font-size:.8rem;white-space:nowrap}.green{border-color:rgba(62,207,142,.28);background:rgba(62,207,142,.1)}.purple{border-color:rgba(139,92,246,.24);background:rgba(139,92,246,.1)}.amber{border-color:rgba(245,158,11,.24);background:rgba(245,158,11,.1)}.list{display:none;overflow:auto;border:1px solid var(--line);border-radius:16px}.list.active{display:block}.galleryWrap.active{display:block}.galleryWrap{display:none}table{width:100%;border-collapse:collapse}th,td{padding:12px 10px;text-align:left;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:top}th{position:sticky;top:0;background:rgba(10,17,26,.96);backdrop-filter:blur(10px);text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#dbe7f2}th button{all:unset;cursor:pointer}tr:hover{background:rgba(62,207,142,.06)}tr.current{background:rgba(62,207,142,.1)}.rt{width:58px;height:58px;border-radius:12px;object-fit:cover;border:1px solid var(--line)}.rtitle{display:flex;gap:12px;align-items:flex-start}.rtitle .subt{color:var(--muted);font-size:.8rem;margin-top:4px}.tabletags{display:flex;flex-wrap:wrap;gap:6px}.tabletags .chip{padding:5px 8px;font-size:.75rem}.inspector{position:sticky;top:18px}.hero{aspect-ratio:1.15/1;border-bottom:1px solid var(--line);background:#061019}.hero img{width:100%;height:100%;object-fit:cover;display:block}.ibody{padding:16px;display:grid;gap:14px}.ibox{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:16px;padding:12px 13px}.ibox h4{margin:0 0 8px;font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:#dbe7f2}.kv{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;font-size:.9rem}.kv dt{color:var(--muted)}.kv dd{margin:0}.footer{margin-top:14px;padding:14px 18px;color:var(--muted)}.lightbox[hidden]{display:none}.lightbox{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:16px;background:rgba(3,7,12,.84);backdrop-filter:blur(12px)}.lshell{width:min(1280px,100%);max-height:min(92vh,1020px);background:linear-gradient(180deg, rgba(15,24,37,.98), rgba(9,16,25,.98));border:1px solid rgba(255,255,255,.14);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(320px,.9fr)}.lmedia{position:relative;background:#050a12;min-height:320px}.lmedia img{width:100%;height:100%;object-fit:contain;display:block;max-height:92vh}.lpanel{padding:18px;overflow:auto;display:grid;gap:16px}.ltop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.ltop h3{margin:0;font-size:1.2rem}.icon{border:1px solid var(--line);width:42px;height:42px;border-radius:999px;background:rgba(255,255,255,.03);color:var(--text);display:grid;place-items:center;cursor:pointer}.nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2}.nav.left{left:16px}.nav.right{right:16px}.close{position:absolute;top:16px;right:16px;z-index:3}.kbd{color:var(--muted);font-size:.84rem;border-top:1px solid var(--line);padding-top:10px}.kbd code{border:1px solid var(--line);background:rgba(255,255,255,.03);padding:2px 6px;border-radius:999px;color:#e9f2f8}@media (max-width:1180px){.shell{grid-template-columns:1fr}.inspector{position:static}.top{grid-template-columns:1fr}.stats{justify-content:flex-start}}@media (max-width:760px){.app{padding-top:8px}.top,.toolbar,.panel,.footer{border-radius:16px}.gallery{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}.lshell{grid-template-columns:1fr;max-height:94vh}.nav{top:auto;bottom:16px;transform:none}.lmedia{min-height:280px}.row{align-items:stretch}.controls{justify-content:flex-start}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style></head><body>
+<div class="app"><header class="top"><div class="brand"><div class="mark"></div><div><h1>Supabase Award Concepts Gallery</h1><p class="sub">Interactive micro site for comparing desk-worthy award concepts, with category tags, research-backed production notes, and a sortable list. Use search, filters, list view, and the lightbox keyboard controls.</p></div></div><div class="stats" id="stats"></div></header>
+<section class="toolbar" aria-label="Gallery controls"><div class="row"><div class="search"><svg viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.2-4.2m1.7-5.1a6.4 6.4 0 11-12.8 0 6.4 6.4 0 0112.8 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><input id="search" type="search" placeholder="Search title, tags, materials, or notes…" autocomplete="off" /></div><div class="controls"><select id="sourceFilter"><option value="all">All sources</option><option value="Concept">Concepts</option><option value="Pinterest reference">Pinterest references</option></select><select id="sortSelect"><option value="recommended">Recommended</option><option value="title-asc">Title A → Z</option><option value="category-asc">Category</option><option value="cost-asc">Est. cost low → high</option><option value="cost-desc">Est. cost high → low</option><option value="ratio-desc">Wide → tall</option><option value="ratio-asc">Tall → wide</option></select><button class="toggle" id="gridToggle" aria-pressed="true">Gallery</button><button class="toggle" id="listToggle" aria-pressed="false">List</button></div></div><div class="chips" id="categoryStrip"></div></section>
+<div class="shell"><main><section class="panel"><div class="head"><div><h2 class="title">Browse the catalog</h2><p class="subtle">Click any image to open the lightbox. Use the filter chips to narrow by category.</p></div><div class="mode"><button id="modeGallery" aria-pressed="true">Gallery</button><button id="modeList" aria-pressed="false">Sortable list</button></div></div><div class="body"><div class="bar"><div><strong id="resultsCount"></strong> matching items</div><div id="resultsMeta"></div></div><div id="galleryWrap" class="galleryWrap active"><div id="gallery" class="gallery"></div></div><div id="listWrap" class="list"><table><thead><tr><th style="width:240px"><button data-sort="title-asc">Concept</button></th><th><button data-sort="category-asc">Category</button></th><th><button data-sort="cost-asc">Est. cost</button></th><th><button data-sort="ratio-desc">Dimensions</button></th><th>Tags</th></tr></thead><tbody id="listBody"></tbody></table></div><div id="emptyState" class="ibox" hidden><strong>No matches found</strong><div class="subtle">Try a different search term or clear the category filter.</div></div></div></section><div class="footer"><strong style="color:var(--text)">Keyboard:</strong> Esc closes lightbox, ← / → move through visible items, Home / End jump to first or last.</div></main><aside class="inspector"><section class="panel"><div class="hero"><img id="inspectorImage" alt="Selected concept" /></div><div class="ibody" id="inspectorBody"></div></section></aside></div></div>
+<section class="lightbox" id="lightbox" hidden aria-hidden="true"><div class="lshell" role="dialog" aria-modal="true" aria-label="Image lightbox"><div class="lmedia"><button class="icon close" id="closeLightbox" aria-label="Close lightbox">✕</button><div class="nav left"><button class="icon" id="prevItem" aria-label="Previous item">‹</button></div><img id="lightboxImage" alt="" /><div class="nav right"><button class="icon" id="nextItem" aria-label="Next item">›</button></div></div><div class="lpanel" id="lightboxPanel"></div></div></section>
+<script id="items-data" type="application/json">[
+  {
+    "id": "3d_printed_miniature_tv_vcr",
+    "title": "3D Printed Miniature TV/VCR",
+    "fileName": "3d_printed_miniature_tv_vcr.webp",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "3d-printed",
+      "miniature",
+      "tv",
+      "vcr.webp",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "3D Printed Miniature TV/VCR is a printed desk sculpture whose success depends on seam cleanup and surface finishing.",
+    "production": "3D print the form in sections, sand the seams, and seal the surface for a premium desk finish.",
+    "estCost": "$30–$115/unit",
+    "specs": [
+      "Break the object into parts if that helps hide support scars and improve orientation.",
+      "Use a weighted base so the printed shell does not feel top-heavy.",
+      "Choose matte paint, primer, or resin coat depending how much layer line you want to hide."
+    ],
+    "notes": [
+      "Source image: 2618×1965px",
+      "Folder: Award Concepts",
+      "3D prints need seam planning as much as surface finishing.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./3d_printed_miniature_tv_vcr.webp",
+    "width": 2618,
+    "height": 1965,
+    "ratio": 1.332
+  },
+  {
+    "id": "3d_printed_topographic_supabase_logo",
+    "title": "3D Printed Topographic Supabase Logo",
+    "fileName": "3d_printed_topographic_supabase_logo.jpg",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "3d-printed",
+      "topographic",
+      "supabase",
+      "logo.jpg",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "3D Printed Topographic Supabase Logo is a printed desk sculpture whose success depends on seam cleanup and surface finishing.",
+    "production": "3D print the form in sections, sand the seams, and seal the surface for a premium desk finish.",
+    "estCost": "$30–$115/unit",
+    "specs": [
+      "Break the object into parts if that helps hide support scars and improve orientation.",
+      "Use a weighted base so the printed shell does not feel top-heavy.",
+      "Choose matte paint, primer, or resin coat depending how much layer line you want to hide."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "3D prints need seam planning as much as surface finishing.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./3d_printed_topographic_supabase_logo.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  },
+  {
+    "id": "access_granted_medallion",
+    "title": "Access Granted Medallion",
+    "fileName": "access_granted_medallion.png",
+    "source": "Concept",
+    "category": "Recognition / Award",
+    "tags": [
+      "access",
+      "granted",
+      "medallion.png",
+      "award",
+      "recognition",
+      "premium"
+    ],
+    "description": "Access Granted Medallion is a medallion-style award that should read as substantial metal work rather than a flat token.",
+    "production": "Build as a cast or die-struck medallion with polished faces and a weighted base or presentation stand.",
+    "estCost": "$25–$65/unit",
+    "specs": [
+      "Make the face wide enough for a centered icon plus a short title line.",
+      "Keep the body thick enough to feel substantial without looking like a paperweight.",
+      "Use satin, brushed, or polished metal to separate foreground from engraved copy."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Works best as a gift object when the base and face read as one system.",
+      "Presentation packaging should keep corners, edges, and engraved faces free from abrasion."
+    ],
+    "src": "./access_granted_medallion.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "acrylic_phone_stand",
+    "title": "Acrylic Phone Stand",
+    "fileName": "acrylic_phone_stand.jpg",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "acrylic",
+      "phone",
+      "stand.jpg",
+      "utility",
+      "functional",
+      "desk"
+    ],
+    "description": "Acrylic Phone Stand is a phone stand concept centered on viewing angle, cable routing, and desk stability.",
+    "production": "Build as a acrylic phone stand with a fixed viewing angle, anti-slip feet, and a clean cable pass-through.",
+    "estCost": "$15–$40/unit",
+    "specs": [
+      "Keep the footprint small enough for a keyboard-and-mouse desk without crowding.",
+      "Use a slot angle that supports video calls and message reading without tipping the phone.",
+      "Finish the contact points with rubber, cork, or felt so the stand stays planted."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Best when the charge cable can route through the back without pinching.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./acrylic_phone_stand.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "acrylic_supabase_cube_award",
+    "title": "Acrylic Supabase Cube Award",
+    "fileName": "acrylic_supabase_cube_award.jpg",
+    "source": "Concept",
+    "category": "Recognition / Award",
+    "tags": [
+      "acrylic",
+      "supabase",
+      "cube",
+      "award.jpg",
+      "award",
+      "recognition",
+      "premium"
+    ],
+    "description": "Acrylic Supabase Cube Award is an acrylic award concept built around layered depth, sharp edge finish, and a stable base.",
+    "production": "Laser-cut layered acrylic with flame-polished or sanded edges and a weighted base block.",
+    "estCost": "$25–$65/unit",
+    "specs": [
+      "Stack 2–4 layers so the silhouette has depth without becoming brittle.",
+      "Keep the base broad enough to support the cube or logo face without wobble.",
+      "Use matte black, clear, or branded green acrylic with engraved highlights."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Layer lines and edge glow are part of the look, so the cut should be clean and well aligned.",
+      "Presentation packaging should keep corners, edges, and engraved faces free from abrasion."
+    ],
+    "src": "./acrylic_supabase_cube_award.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "atomic_orbit_sculpture",
+    "title": "Atomic Orbit Sculpture",
+    "fileName": "atomic_orbit_sculpture.png",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "atomic",
+      "orbit",
+      "sculpture.png",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "Atomic Orbit Sculpture is a compact sculptural object designed to read as a miniature collectible from arm’s length.",
+    "production": "Treat the piece as a desk sculpture: cast, print, or CNC it in a few stable parts with a finished base.",
+    "estCost": "$35–$120/unit",
+    "specs": [
+      "Keep the silhouette readable from arm’s length and avoid overly thin spindles.",
+      "Use a base that gives the object visual grounding and physical stability.",
+      "Finish with paint, stain, or resin so the surface feels intentional rather than raw."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Most of these concepts work best when the base is as carefully designed as the silhouette.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./atomic_orbit_sculpture.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "bamboo_phone_stand",
+    "title": "Bamboo Phone Stand",
+    "fileName": "bamboo_phone_stand.png",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "bamboo",
+      "phone",
+      "stand.png",
+      "utility",
+      "functional",
+      "desk"
+    ],
+    "description": "Bamboo Phone Stand is a phone stand concept centered on viewing angle, cable routing, and desk stability.",
+    "production": "Build as a wood phone stand with a fixed viewing angle, anti-slip feet, and a clean cable pass-through.",
+    "estCost": "$15–$40/unit",
+    "specs": [
+      "Keep the footprint small enough for a keyboard-and-mouse desk without crowding.",
+      "Use a slot angle that supports video calls and message reading without tipping the phone.",
+      "Finish the contact points with rubber, cork, or felt so the stand stays planted."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Best when the charge cable can route through the back without pinching.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./bamboo_phone_stand.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "black_lattice_cube_award",
+    "title": "Black Lattice Cube Award",
+    "fileName": "black_lattice_cube_award.jpg",
+    "source": "Concept",
+    "category": "Recognition / Award",
+    "tags": [
+      "black",
+      "lattice",
+      "cube",
+      "award.jpg",
+      "award",
+      "recognition",
+      "premium"
+    ],
+    "description": "Black Lattice Cube Award is a recognition piece meant to read clearly from a desk or shelf and feel deliberate in the hand.",
+    "production": "Produce as a premium desktop award with a clean face, stable base, and material-specific finishing.",
+    "estCost": "$25–$65/unit",
+    "specs": [
+      "Give the object enough weight to stay upright on a shelf or desk.",
+      "Reserve one flat face for the primary engraving or logo treatment.",
+      "Package each piece in a custom insert so corners and edges do not chip in transit."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Keep the object readable from a few feet away; tiny details should only support the main mark.",
+      "Presentation packaging should keep corners, edges, and engraved faces free from abrasion."
+    ],
+    "src": "./black_lattice_cube_award.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "bronze_commemorative_coin",
+    "title": "Bronze Commemorative Coin",
+    "fileName": "bronze_commemorative_coin.jpg",
+    "source": "Concept",
+    "category": "Recognition / Award",
+    "tags": [
+      "bronze",
+      "commemorative",
+      "coin.jpg",
+      "award",
+      "recognition",
+      "premium"
+    ],
+    "description": "Bronze Commemorative Coin is a challenge-coin style award that should feel stamped, collectible, and easy to hand out in volume.",
+    "production": "Die-struck coin or medallion in brass/zinc alloy with antique bronze plating and debossed edge text.",
+    "estCost": "$11–$18/unit",
+    "specs": [
+      "Target diameter: 50–57 mm with a 3–4 mm profile.",
+      "Use recessed relief and a clean rim so the artwork stays legible after plating.",
+      "Pack individually in capsules or velvet pouches to prevent rim scuffing."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Best when artwork stays bold and shallow instead of overly intricate.",
+      "Presentation packaging should keep corners, edges, and engraved faces free from abrasion."
+    ],
+    "src": "./bronze_commemorative_coin.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "ceramic_mug_wood_base",
+    "title": "Ceramic Mug Wood Base",
+    "fileName": "ceramic_mug_wood_base.png",
+    "source": "Concept",
+    "category": "Drinkware",
+    "tags": [
+      "ceramic",
+      "mug",
+      "wood",
+      "base.png",
+      "desk"
+    ],
+    "description": "Ceramic Mug Wood Base is a premium mug concept that pairs a stock ceramic cup with a warm wood accent.",
+    "production": "Start from a stock ceramic mug blank, then add durable print, glaze-safe decoration, and an optional wood accent.",
+    "estCost": "$28–$35/unit",
+    "specs": [
+      "Aim for a 12–14 oz capacity so it feels like office drinkware rather than a novelty cup.",
+      "Keep the decoration off the lip and handle zones to preserve comfort and washability.",
+      "Use a wood base or lid only if it can be removed and repacked without chipping the mug."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Mugs work best when the decoration is durable and the packaging absorbs rim impacts.",
+      "If the object touches food or liquid, confirm the decoration and materials stay food-safe."
+    ],
+    "src": "./ceramic_mug_wood_base.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "concrete_geometric_shapes_supabase",
+    "title": "Concrete Geometric Shapes Supabase",
+    "fileName": "concrete_geometric_shapes_supabase.jpg",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "concrete",
+      "geometric",
+      "shapes",
+      "supabase.jpg",
+      "sculptural",
+      "collectible",
+      "desk",
+      "supabase"
+    ],
+    "description": "Concrete Geometric Shapes Supabase is a cast object concept where edge quality and surface control matter more than ornament.",
+    "production": "Cast in a well-sealed mold with a smooth release surface and a penetrating sealer after demold.",
+    "estCost": "$35–$120/unit",
+    "specs": [
+      "Keep wall thickness and base mass consistent so the piece dries evenly.",
+      "Use a sealed bottom or felt pads to stop grit from scratching the desk.",
+      "Reserve any engraved detail for the mold so the cast face stays crisp."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Concrete looks best when the edges are sharp and the pores are controlled.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./concrete_geometric_shapes_supabase.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "concrete_lightning_blocks",
+    "title": "Concrete Lightning Blocks",
+    "fileName": "concrete_lightning_blocks.jpg",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "concrete",
+      "lightning",
+      "blocks.jpg",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "Concrete Lightning Blocks is a cast object concept where edge quality and surface control matter more than ornament.",
+    "production": "Cast in a well-sealed mold with a smooth release surface and a penetrating sealer after demold.",
+    "estCost": "$35–$120/unit",
+    "specs": [
+      "Keep wall thickness and base mass consistent so the piece dries evenly.",
+      "Use a sealed bottom or felt pads to stop grit from scratching the desk.",
+      "Reserve any engraved detail for the mold so the cast face stays crisp."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Concrete looks best when the edges are sharp and the pores are controlled.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./concrete_lightning_blocks.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "crystal_lightning_award",
+    "title": "Crystal Lightning Award",
+    "fileName": "crystal_lightning_award.png",
+    "source": "Concept",
+    "category": "Recognition / Award",
+    "tags": [
+      "crystal",
+      "lightning",
+      "award.png",
+      "award",
+      "recognition",
+      "premium"
+    ],
+    "description": "Crystal Lightning Award is a recognition piece meant to read clearly from a desk or shelf and feel deliberate in the hand.",
+    "production": "Produce as a premium desktop award with a clean face, stable base, and material-specific finishing.",
+    "estCost": "$35–$75/unit",
+    "specs": [
+      "Give the object enough weight to stay upright on a shelf or desk.",
+      "Reserve one flat face for the primary engraving or logo treatment.",
+      "Package each piece in a custom insert so corners and edges do not chip in transit."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Keep the object readable from a few feet away; tiny details should only support the main mark.",
+      "Presentation packaging should keep corners, edges, and engraved faces free from abrasion."
+    ],
+    "src": "./crystal_lightning_award.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "database_schema_plaque",
+    "title": "Database Schema Plaque",
+    "fileName": "database_schema_plaque.png",
+    "source": "Concept",
+    "category": "Recognition / Award",
+    "tags": [
+      "database",
+      "schema",
+      "plaque.png",
+      "award",
+      "recognition",
+      "premium"
+    ],
+    "description": "Database Schema Plaque is a plaque-format award that depends on a crisp face, legible linework, and a clean presentation stand.",
+    "production": "Use a stock plaque blank in stone, ceramic, or aluminum, then add a crisp engraved or UV-printed face.",
+    "estCost": "$31–$45/unit",
+    "specs": [
+      "Keep the face around 6–8 in on the long side so the graphic reads from a desk.",
+      "Choose a flat engraving plane with enough margin for sponsor copy or schema lines.",
+      "Pair the plaque with a stable stand or hidden wall keyhole depending display context."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Fine lines and small type need a polished surface rather than rough cast texture.",
+      "Presentation packaging should keep corners, edges, and engraved faces free from abrasion."
+    ],
+    "src": "./database_schema_plaque.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "e_ink_partner_status",
+    "title": "E‑Ink Partner Status",
+    "fileName": "e_ink_partner_status.jpg",
+    "source": "Concept",
+    "category": "Display / Interface",
+    "tags": [
+      "e-ink",
+      "partner",
+      "status.jpg",
+      "electronic",
+      "display",
+      "interactive"
+    ],
+    "description": "E‑Ink Partner Status is a status-display concept that should communicate one state quickly and clearly.",
+    "production": "Treat as a status display or tabletop dashboard with a readable face and serviceable electronics.",
+    "estCost": "$149–$175/unit",
+    "specs": [
+      "Reserve one clear status zone for the main message and one smaller area for supporting copy.",
+      "Use an enclosure that allows battery or cable replacement without destroying the panel.",
+      "Make the object usable from a seated desk distance, not just on camera."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Status objects need instant recognition, not dense UI detail.",
+      "Screen readability and service access are more important than a fully hidden hardware stack."
+    ],
+    "src": "./e_ink_partner_status.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "e_ink_sql_gratitude",
+    "title": "E‑Ink SQL Gratitude",
+    "fileName": "e_ink_sql_gratitude.png",
+    "source": "Concept",
+    "category": "Display / Interface",
+    "tags": [
+      "e-ink",
+      "sql",
+      "gratitude.png",
+      "electronic",
+      "display",
+      "interactive"
+    ],
+    "description": "E‑Ink SQL Gratitude is a tabletop display object that needs clear content, service access, and strong contrast.",
+    "production": "Keep it battery-free and wireless-free: use a stock 7.5-inch e-paper module, USB-C power, and a serviceable enclosure.",
+    "estCost": "$149–$175/unit",
+    "specs": [
+      "Use a 7.5 in class panel with a calm, high-contrast idle layout.",
+      "Keep the back open for USB-C power, firmware access, and screen replacement.",
+      "Lock the content into a simple status or quote page so refreshes stay predictable."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Research: the wired USB-C route is the safe version; battery and wireless add compliance and shipping risk.",
+      "Antistatic bag plus foam support are mandatory for pack-out."
+    ],
+    "src": "./e_ink_sql_gratitude.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "e_ink_sql_tips",
+    "title": "E‑Ink SQL Tips",
+    "fileName": "e_ink_sql_tips.jpg",
+    "source": "Concept",
+    "category": "Display / Interface",
+    "tags": [
+      "e-ink",
+      "sql",
+      "tips.jpg",
+      "electronic",
+      "display",
+      "interactive"
+    ],
+    "description": "E‑Ink SQL Tips is a tabletop display object that needs clear content, service access, and strong contrast.",
+    "production": "Keep it battery-free and wireless-free: use a stock 7.5-inch e-paper module, USB-C power, and a serviceable enclosure.",
+    "estCost": "$57–$162/unit",
+    "specs": [
+      "Use a 7.5 in class panel with a layout that favors short tips or code snippets.",
+      "Keep the rear service door easy to open so firmware updates do not require a destructive teardown.",
+      "Pair the screen with a matte front bezel so the display reads as a desk object instead of a gadget."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "Research: the wired route is practical, but the battery/wireless smart-terminal version is not recommended for this schedule.",
+      "Cable strain relief and a separated cable compartment belong in the enclosure."
+    ],
+    "src": "./e_ink_sql_tips.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  },
+  {
+    "id": "floating_glowing_green_gem",
+    "title": "Floating Glowing Green Gem",
+    "fileName": "floating_glowing_green_gem.png",
+    "source": "Concept",
+    "category": "Lighting / Glow",
+    "tags": [
+      "floating",
+      "glowing",
+      "green",
+      "gem.png",
+      "glow",
+      "desk",
+      "led"
+    ],
+    "description": "Floating Glowing Green Gem is a glow object that depends on soft diffusion and a well-hidden power path.",
+    "production": "Use a low-voltage LED architecture with a diffused front surface and a weighted base.",
+    "estCost": "$30–$70/unit",
+    "specs": [
+      "Keep the footprint desk-friendly and cord routing tidy.",
+      "Make the brightness adjustable or naturally soft to reduce glare.",
+      "Use a matte or frosted finish where the light should bloom instead of hotspot."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Glow objects should read as ambient accents, not as product-demo hardware.",
+      "Cable routing and heat management should be proven before committing to an enclosure."
+    ],
+    "src": "./floating_glowing_green_gem.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "fluid_simulation_glass",
+    "title": "Fluid Simulation Glass",
+    "fileName": "fluid_simulation_glass.jpg",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "fluid",
+      "simulation",
+      "glass.jpg",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "Fluid Simulation Glass is a transparent or translucent sculpture that relies on light, polish, and safe packaging.",
+    "production": "Use cast glass, polished glass, or resin with optical clarity depending the fragility and cost target.",
+    "estCost": "$45–$130/unit",
+    "specs": [
+      "Keep the profile short enough that the object feels intentional rather than precarious.",
+      "Use polished edges or clear walls to catch light without showing packaging scratches.",
+      "Plan for satin foam or deep cavities in the carton to prevent chip damage."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "Transparency does the heavy lifting here, so edge quality matters more than ornament.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./fluid_simulation_glass.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  },
+  {
+    "id": "geometric_elephant_figurine",
+    "title": "Geometric Elephant Figurine",
+    "fileName": "geometric_elephant_figurine.jpg",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "geometric",
+      "elephant",
+      "figurine.jpg",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "Geometric Elephant Figurine is a compact sculptural object designed to read as a miniature collectible from arm’s length.",
+    "production": "Treat the piece as a desk sculpture: cast, print, or CNC it in a few stable parts with a finished base.",
+    "estCost": "$35–$120/unit",
+    "specs": [
+      "Keep the silhouette readable from arm’s length and avoid overly thin spindles.",
+      "Use a base that gives the object visual grounding and physical stability.",
+      "Finish with paint, stain, or resin so the surface feels intentional rather than raw."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Most of these concepts work best when the base is as carefully designed as the silhouette.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./geometric_elephant_figurine.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "geometric_terrarium",
+    "title": "Geometric Terrarium",
+    "fileName": "geometric_terrarium.jpg",
+    "source": "Concept",
+    "category": "Plant / Terrarium",
+    "tags": [
+      "geometric",
+      "terrarium.jpg",
+      "organic",
+      "desk"
+    ],
+    "description": "Geometric Terrarium is a small glass planter concept that works best when moisture and breakage are controlled.",
+    "production": "Assemble from a stock glass vessel with preserved moss or low-maintenance plant material and a moisture-safe base.",
+    "estCost": "$55–$70/unit",
+    "specs": [
+      "Keep the vessel compact enough to sit beside a laptop without crowding the desk.",
+      "Seal or isolate the base so humidity does not creep into the presentation surface.",
+      "Use a packing scheme that holds the glass upright and prevents plant movement."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Preserved materials reduce maintenance and avoid live-plant shipping problems.",
+      "Moisture control and local sourcing matter more here than decorative complexity."
+    ],
+    "src": "./geometric_terrarium.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "glass_data_viz_award",
+    "title": "Glass Data Viz Award",
+    "fileName": "glass_data_viz_award.png",
+    "source": "Concept",
+    "category": "Recognition / Award",
+    "tags": [
+      "glass",
+      "data",
+      "viz",
+      "award.png",
+      "electronic",
+      "display",
+      "interactive"
+    ],
+    "description": "Glass Data Viz Award is a glass-trophy award that needs edge polish, engraved contrast, and safe packaging.",
+    "production": "Use a stock glass award blank with sandblast engraving or UV print, then pair it with a custom base plate.",
+    "estCost": "$64–$80/unit",
+    "specs": [
+      "Keep the body in the 6–8 in tall range so it fits on a shelf without crowding.",
+      "Use a polished edge or chamfer so the award feels intentional instead of generic.",
+      "Protect the glass in a satin-lined carton or dense foam tray."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Ballroom lighting will make edge polish and base contrast more important than the exact silhouette.",
+      "Presentation packaging should keep corners, edges, and engraved faces free from abrasion."
+    ],
+    "src": "./glass_data_viz_award.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "glass_dry_erase_board",
+    "title": "Glass Dry Erase Board",
+    "fileName": "glass_dry_erase_board.jpg",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "glass",
+      "dry",
+      "erase",
+      "board.jpg",
+      "utility",
+      "functional",
+      "desk"
+    ],
+    "description": "Glass Dry Erase Board is a utility object designed to solve a small desk problem with a clean material finish.",
+    "production": "Use tempered glass with polished edges, hidden standoffs, and a shallow marker tray instead of a fully custom frame.",
+    "estCost": "$25–$50/unit",
+    "specs": [
+      "Keep the writing surface large enough for quick standups but compact enough for a desk return.",
+      "Use low-iron or clear glass so marker ink stays legible under office light.",
+      "Add a tray or magnetic accessory zone for erasers and pens."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Glass needs edge polish and packaged corner protection to survive shipping.",
+      "One-handed marker pickup and wipe-down should stay easy on the first day and the hundredth."
+    ],
+    "src": "./glass_dry_erase_board.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "glass_house_terrarium",
+    "title": "Glass House Terrarium",
+    "fileName": "glass_house_terrarium.png",
+    "source": "Concept",
+    "category": "Plant / Terrarium",
+    "tags": [
+      "glass",
+      "house",
+      "terrarium.png",
+      "organic",
+      "desk"
+    ],
+    "description": "Glass House Terrarium is a small glass planter concept that works best when moisture and breakage are controlled.",
+    "production": "Assemble from a stock glass vessel with preserved moss or low-maintenance plant material and a moisture-safe base.",
+    "estCost": "$28–$55/unit",
+    "specs": [
+      "Keep the vessel compact enough to sit beside a laptop without crowding the desk.",
+      "Seal or isolate the base so humidity does not creep into the presentation surface.",
+      "Use a packing scheme that holds the glass upright and prevents plant movement."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Preserved materials reduce maintenance and avoid live-plant shipping problems.",
+      "Moisture control and local sourcing matter more here than decorative complexity."
+    ],
+    "src": "./glass_house_terrarium.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "green_ceramic_mug",
+    "title": "Green Ceramic Mug",
+    "fileName": "green_ceramic_mug.jpg",
+    "source": "Concept",
+    "category": "Drinkware",
+    "tags": [
+      "green",
+      "ceramic",
+      "mug.jpg",
+      "desk"
+    ],
+    "description": "Green Ceramic Mug is a drinkware concept that should feel durable, giftable, and office-friendly.",
+    "production": "Start from a stock ceramic mug blank, then add durable print, glaze-safe decoration, and an optional wood accent.",
+    "estCost": "$18–$34/unit",
+    "specs": [
+      "Aim for a 12–14 oz capacity so it feels like office drinkware rather than a novelty cup.",
+      "Keep the decoration off the lip and handle zones to preserve comfort and washability.",
+      "Use a wood base or lid only if it can be removed and repacked without chipping the mug."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Mugs work best when the decoration is durable and the packaging absorbs rim impacts.",
+      "If the object touches food or liquid, confirm the decoration and materials stay food-safe."
+    ],
+    "src": "./green_ceramic_mug.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "green_glowing_lightning_bolt",
+    "title": "Green Glowing Lightning Bolt",
+    "fileName": "green_glowing_lightning_bolt.jpg",
+    "source": "Concept",
+    "category": "Lighting / Glow",
+    "tags": [
+      "green",
+      "glowing",
+      "lightning",
+      "bolt.jpg",
+      "glow",
+      "desk",
+      "led"
+    ],
+    "description": "Green Glowing Lightning Bolt is a luminous desk object built to look sculptural even when switched off.",
+    "production": "Use a diffused shell around a low-voltage LED or edge-lit core with concealed cable routing.",
+    "estCost": "$30–$70/unit",
+    "specs": [
+      "Balance the luminous element on a compact base so it can survive desk bumps.",
+      "Keep the glow soft enough to read as ambient art rather than an indicator light.",
+      "Hide cable exit points and vents on the least visible side of the object."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "These pieces succeed when the light seems to float or strike from inside the form.",
+      "Cable routing and heat management should be proven before committing to an enclosure."
+    ],
+    "src": "./green_glowing_lightning_bolt.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "green_keycap_keyboard",
+    "title": "Green Keycap Keyboard",
+    "fileName": "green_keycap_keyboard.jpg",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "green",
+      "keycap",
+      "keyboard.jpg",
+      "utility",
+      "functional",
+      "desk"
+    ],
+    "description": "Green Keycap Keyboard is a keyboard accessory concept that changes the look of the desk while preserving typing reliability.",
+    "production": "Pair a standard mechanical keyboard with custom keycaps rather than building a full board from scratch.",
+    "estCost": "$15–$40/unit",
+    "specs": [
+      "Use a compatible layout so the keys remain serviceable after the event.",
+      "Limit the special treatment to modifiers or a signature cluster to keep typing reliable.",
+      "Choose a keycap material that survives heavy desk use and frequent cleaning."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "A full custom PCB is unnecessary when the visual change can live in the caps.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./green_keycap_keyboard.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "green_lightning_bolt_sculpture",
+    "title": "Green Lightning Bolt Sculpture",
+    "fileName": "green_lightning_bolt_sculpture.png",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "green",
+      "lightning",
+      "bolt",
+      "sculpture.png",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "Green Lightning Bolt Sculpture is a desk sculpture meant to feel balanced, finished, and intentional from every angle.",
+    "production": "Treat the piece as a desk sculpture: cast, print, or CNC it in a few stable parts with a finished base.",
+    "estCost": "$35–$120/unit",
+    "specs": [
+      "Keep the silhouette readable from arm’s length and avoid overly thin spindles.",
+      "Use a base that gives the object visual grounding and physical stability.",
+      "Finish with paint, stain, or resin so the surface feels intentional rather than raw."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Most of these concepts work best when the base is as carefully designed as the silhouette.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./green_lightning_bolt_sculpture.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "green_succulent_planter_tag",
+    "title": "Green Succulent Planter Tag",
+    "fileName": "green_succulent_planter_tag.jpg",
+    "source": "Concept",
+    "category": "Plant / Terrarium",
+    "tags": [
+      "green",
+      "succulent",
+      "planter",
+      "tag.jpg",
+      "organic",
+      "desk"
+    ],
+    "description": "Green Succulent Planter Tag is a plant-forward desk piece that depends on fresh sourcing and careful local assembly.",
+    "production": "Use a local planter, a healthy succulent, and an engraved tag or stake assembled near the delivery point.",
+    "estCost": "$18–$45/unit",
+    "specs": [
+      "Choose a pot that drains cleanly and does not trap standing water.",
+      "Keep the plant height modest so the object reads as a desk accent instead of a centerpiece.",
+      "Use breathable packing that keeps the soil stable and the leaves uncrushed."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "Local assembly is the easiest way to keep the plant fresh and the pot intact.",
+      "Moisture control and local sourcing matter more here than decorative complexity."
+    ],
+    "src": "./green_succulent_planter_tag.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  },
+  {
+    "id": "green_succulent_pot_tag",
+    "title": "Green Succulent Pot Tag",
+    "fileName": "green_succulent_pot_tag.png",
+    "source": "Concept",
+    "category": "Plant / Terrarium",
+    "tags": [
+      "green",
+      "succulent",
+      "pot",
+      "tag.png",
+      "organic",
+      "desk"
+    ],
+    "description": "Green Succulent Pot Tag is a plant-forward desk piece that depends on fresh sourcing and careful local assembly.",
+    "production": "Use a local planter, a healthy succulent, and an engraved tag or stake assembled near the delivery point.",
+    "estCost": "$26–$35/unit",
+    "specs": [
+      "Choose a pot that drains cleanly and does not trap standing water.",
+      "Keep the plant height modest so the object reads as a desk accent instead of a centerpiece.",
+      "Use breathable packing that keeps the soil stable and the leaves uncrushed."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Local assembly is the easiest way to keep the plant fresh and the pot intact.",
+      "Moisture control and local sourcing matter more here than decorative complexity."
+    ],
+    "src": "./green_succulent_pot_tag.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "heated_smart_mug_app_2",
+    "title": "Heated Smart Mug App 2",
+    "fileName": "heated_smart_mug_app_2.jpg",
+    "source": "Concept",
+    "category": "Drinkware",
+    "tags": [
+      "heated",
+      "smart",
+      "mug",
+      "app",
+      "2.jpg",
+      "ceramic",
+      "desk"
+    ],
+    "description": "Heated Smart Mug App 2 is a heated drinkware concept that mixes a ceramic vessel with a powered warming base.",
+    "production": "Use a heated mug system with a stock ceramic vessel, electronic coaster, and sealed power path.",
+    "estCost": "$12–$28/unit",
+    "specs": [
+      "Separate the mug body from the heating electronics so cleaning stays safe.",
+      "Keep the coaster base wide enough for docking and thermal stability.",
+      "Test temperature regulation over a full work session rather than a short demo."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "This is the riskiest drinkware route because heat, power, and compliance all intersect.",
+      "If the object touches food or liquid, confirm the decoration and materials stay food-safe."
+    ],
+    "src": "./heated_smart_mug_app_2.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "leather_cable_organizer_cord_wraps",
+    "title": "Leather Cable Organizer Cord Wraps",
+    "fileName": "leather_cable_organizer_cord_wraps.jpg",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "leather",
+      "cable",
+      "organizer",
+      "cord",
+      "wraps.jpg",
+      "utility",
+      "functional",
+      "desk"
+    ],
+    "description": "Leather Cable Organizer Cord Wraps is a cable-management accessory that should tame clutter without adding desk bulk.",
+    "production": "Die-cut vegetable-tanned leather cord wraps with rivets or snaps, then burnish the edges and test the closure cycle.",
+    "estCost": "$15–$40/unit",
+    "specs": [
+      "Size the strap length for common USB-C and headphone cables without over-tightening.",
+      "Use a reinforced hole or snap so the leather does not tear after repeated use.",
+      "Keep the profile flat enough to live inside a tech pouch or desk drawer."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Edge finish matters here because rough leather burns through quickly at the fold line.",
+      "A clean snap or rivet makes the wrap feel intentional instead of crafty."
+    ],
+    "src": "./leather_cable_organizer_cord_wraps.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "leather_desk_tray_accessories",
+    "title": "Leather Desk Tray Accessories",
+    "fileName": "leather_desk_tray_accessories.jpg",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "leather",
+      "desk",
+      "tray",
+      "accessories.jpg",
+      "utility",
+      "functional"
+    ],
+    "description": "Leather Desk Tray Accessories is a utility object designed to solve a small desk problem with a clean material finish.",
+    "production": "Build as a leather-wrapped valet tray or accessory tray with a rigid core, stitched perimeter, and soft lining.",
+    "estCost": "$15–$40/unit",
+    "specs": [
+      "Give the tray enough depth to hold keys, adapters, or small desk tools without spilling.",
+      "Use a rigid substrate so the tray keeps its shape when loaded unevenly.",
+      "Choose a lining that protects metal accessories from scratching the leather face."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Corner construction should be square and tidy because crooked corners look cheap on leather goods.",
+      "The tray should feel like a desk catch-all rather than a decorative bowl."
+    ],
+    "src": "./leather_desk_tray_accessories.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "levity_node_cube_award",
+    "title": "Levity Node Cube Award",
+    "fileName": "levity_node_cube_award.jpg",
+    "source": "Concept",
+    "category": "Recognition / Award",
+    "tags": [
+      "levity",
+      "node",
+      "cube",
+      "award.jpg",
+      "award",
+      "recognition",
+      "premium"
+    ],
+    "description": "Levity Node Cube Award is a recognition piece meant to read clearly from a desk or shelf and feel deliberate in the hand.",
+    "production": "Produce as a premium desktop award with a clean face, stable base, and material-specific finishing.",
+    "estCost": "$25–$65/unit",
+    "specs": [
+      "Give the object enough weight to stay upright on a shelf or desk.",
+      "Reserve one flat face for the primary engraving or logo treatment.",
+      "Package each piece in a custom insert so corners and edges do not chip in transit."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Keep the object readable from a few feet away; tiny details should only support the main mark.",
+      "Presentation packaging should keep corners, edges, and engraved faces free from abrasion."
+    ],
+    "src": "./levity_node_cube_award.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "lightning_bolt_lamp",
+    "title": "Lightning Bolt Lamp",
+    "fileName": "lightning_bolt_lamp.png",
+    "source": "Concept",
+    "category": "Lighting / Glow",
+    "tags": [
+      "lightning",
+      "bolt",
+      "lamp.png",
+      "glow",
+      "desk",
+      "led"
+    ],
+    "description": "Lightning Bolt Lamp is a desk lamp concept shaped by brightness control, cable routing, and a calm glow.",
+    "production": "Build around a low-voltage LED source, a dimmable driver, and a stable base with a diffuser or reflector.",
+    "estCost": "$30–$70/unit",
+    "specs": [
+      "Keep the light source comfortable for a desk, not a room floodlight.",
+      "Make the power path serviceable with a replaceable cable or adapter.",
+      "Use a diffuser or reflector so the glow feels deliberate rather than harsh."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Good lighting concepts feel calm in ambient rooms and readable in low light.",
+      "Cable routing and heat management should be proven before committing to an enclosure."
+    ],
+    "src": "./lightning_bolt_lamp.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "magnetic_hourglass",
+    "title": "Magnetic Hourglass",
+    "fileName": "magnetic_hourglass.png",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "magnetic",
+      "hourglass.png",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "Magnetic Hourglass is a transparent or translucent sculpture that relies on light, polish, and safe packaging.",
+    "production": "Use cast glass, polished glass, or resin with optical clarity depending the fragility and cost target.",
+    "estCost": "$45–$130/unit",
+    "specs": [
+      "Keep the profile short enough that the object feels intentional rather than precarious.",
+      "Use polished edges or clear walls to catch light without showing packaging scratches.",
+      "Plan for satin foam or deep cavities in the carton to prevent chip damage."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Transparency does the heavy lifting here, so edge quality matters more than ornament.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./magnetic_hourglass.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "metal_access_key",
+    "title": "Metal Access Key",
+    "fileName": "metal_access_key.png",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "metal",
+      "access",
+      "key.png",
+      "utility",
+      "functional",
+      "desk"
+    ],
+    "description": "Metal Access Key is a metal desk artifact that should feel machined, weighty, and precise.",
+    "production": "Waterjet or fiber-laser cut 304 stainless or 6061 aluminum, then deburr and brush the faces.",
+    "estCost": "$63–$85/unit",
+    "specs": [
+      "Keep the key long enough to read as an access artifact without becoming a sword-like object.",
+      "Radius all corners so the piece is safe to handle and easy to pack.",
+      "Protect brushed surfaces with film and dense foam during shipping."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "A crisp cut edge and brushed finish carry the prestige here, not complex geometry.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./metal_access_key.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "miniature_workbench",
+    "title": "Miniature Workbench",
+    "fileName": "miniature_workbench.png",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "miniature",
+      "workbench.png",
+      "utility",
+      "functional",
+      "desk"
+    ],
+    "description": "Miniature Workbench is a miniature desktop scene that turns workshop detail into a small collectible object.",
+    "production": "Treat as a scaled workshop object made from CNC wood, printed parts, or laser-cut assemblies.",
+    "estCost": "$15–$40/unit",
+    "specs": [
+      "Build the scene in layers so clamps, shelves, and tools read clearly from one angle.",
+      "Use a stable base plate so the mini object behaves like a display piece instead of a toy.",
+      "Avoid fragile protrusions that can snap during pack-out or desktop handling."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "This is strongest when the miniature details evoke craft without requiring tiny moving parts.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./miniature_workbench.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "original-32abbfba1d213882d48d3e6743bf99f5",
+    "title": "Pinterest Reference 01",
+    "fileName": "original-32abbfba1d213882d48d3e6743bf99f5.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "32abbfba1d213882d48d3e6743bf99f5.webp",
+      "reference",
+      "moodboard",
+      "inspiration"
+    ],
+    "description": "Pinterest Reference 01 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 752×564px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/original-32abbfba1d213882d48d3e6743bf99f5.webp",
+    "width": 752,
+    "height": 564,
+    "ratio": 1.333
+  },
+  {
+    "id": "original-399466ee34904405c58aac260f866bc6",
+    "title": "Pinterest Reference 02",
+    "fileName": "original-399466ee34904405c58aac260f866bc6.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "399466ee34904405c58aac260f866bc6.webp",
+      "reference",
+      "moodboard",
+      "inspiration"
+    ],
+    "description": "Pinterest Reference 02 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 1000×750px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/original-399466ee34904405c58aac260f866bc6.webp",
+    "width": 1000,
+    "height": 750,
+    "ratio": 1.333
+  },
+  {
+    "id": "original-3c6b8ff4e3610e4d547c2a322813ff13",
+    "title": "Pinterest Reference 03",
+    "fileName": "original-3c6b8ff4e3610e4d547c2a322813ff13.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "3c6b8ff4e3610e4d547c2a322813ff13.webp",
+      "reference",
+      "moodboard",
+      "inspiration"
+    ],
+    "description": "Pinterest Reference 03 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 800×600px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/original-3c6b8ff4e3610e4d547c2a322813ff13.webp",
+    "width": 800,
+    "height": 600,
+    "ratio": 1.333
+  },
+  {
+    "id": "original-4954bb3df1126e7d617d1fbfb5c1f089",
+    "title": "Pinterest Reference 04",
+    "fileName": "original-4954bb3df1126e7d617d1fbfb5c1f089.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "4954bb3df1126e7d617d1fbfb5c1f089.webp",
+      "reference",
+      "moodboard",
+      "inspiration"
+    ],
+    "description": "Pinterest Reference 04 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 752×564px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/original-4954bb3df1126e7d617d1fbfb5c1f089.webp",
+    "width": 752,
+    "height": 564,
+    "ratio": 1.333
+  },
+  {
+    "id": "original-8b90cac0d2abbb65d37cbfe873246864",
+    "title": "Pinterest Reference 05",
+    "fileName": "original-8b90cac0d2abbb65d37cbfe873246864.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "8b90cac0d2abbb65d37cbfe873246864.webp",
+      "reference",
+      "moodboard",
+      "inspiration"
+    ],
+    "description": "Pinterest Reference 05 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 752×564px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/original-8b90cac0d2abbb65d37cbfe873246864.webp",
+    "width": 752,
+    "height": 564,
+    "ratio": 1.333
+  },
+  {
+    "id": "original-bc5ea79f30f3c0a86bdb1e139fcbcc67",
+    "title": "Pinterest Reference 06",
+    "fileName": "original-bc5ea79f30f3c0a86bdb1e139fcbcc67.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "bc5ea79f30f3c0a86bdb1e139fcbcc67.webp",
+      "reference",
+      "moodboard",
+      "inspiration"
+    ],
+    "description": "Pinterest Reference 06 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 800×600px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/original-bc5ea79f30f3c0a86bdb1e139fcbcc67.webp",
+    "width": 800,
+    "height": 600,
+    "ratio": 1.333
+  },
+  {
+    "id": "original-e3ba29777e63f36d4b7e9b3b4af1761b",
+    "title": "Pinterest Reference 07",
+    "fileName": "original-e3ba29777e63f36d4b7e9b3b4af1761b.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "e3ba29777e63f36d4b7e9b3b4af1761b.webp",
+      "reference",
+      "moodboard",
+      "inspiration"
+    ],
+    "description": "Pinterest Reference 07 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 752×564px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/original-e3ba29777e63f36d4b7e9b3b4af1761b.webp",
+    "width": 752,
+    "height": 564,
+    "ratio": 1.333
+  },
+  {
+    "id": "original-f02d5ec8c5855734b7dbc12f62f5f94e",
+    "title": "Pinterest Reference 08",
+    "fileName": "original-f02d5ec8c5855734b7dbc12f62f5f94e.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "f02d5ec8c5855734b7dbc12f62f5f94e.webp",
+      "reference",
+      "moodboard",
+      "inspiration"
+    ],
+    "description": "Pinterest Reference 08 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 752×564px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/original-f02d5ec8c5855734b7dbc12f62f5f94e.webp",
+    "width": 752,
+    "height": 564,
+    "ratio": 1.333
+  },
+  {
+    "id": "whisplay_ai_chatbot_raspberry_pi_1",
+    "title": "Whisplay AI Chatbot Raspberry Pi 1",
+    "fileName": "whisplay_ai_chatbot_raspberry_pi_1.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "whisplay",
+      "ai",
+      "chatbot",
+      "raspberry",
+      "pi",
+      "1.webp",
+      "reference",
+      "moodboard"
+    ],
+    "description": "Whisplay AI Chatbot Raspberry Pi 1 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 1280×959px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/whisplay_ai_chatbot_raspberry_pi_1.webp",
+    "width": 1280,
+    "height": 959,
+    "ratio": 1.335
+  },
+  {
+    "id": "whisplay_ai_chatbot_raspberry_pi_2",
+    "title": "Whisplay AI Chatbot Raspberry Pi 2",
+    "fileName": "whisplay_ai_chatbot_raspberry_pi_2.webp",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "whisplay",
+      "ai",
+      "chatbot",
+      "raspberry",
+      "pi",
+      "2.webp",
+      "reference",
+      "moodboard"
+    ],
+    "description": "Whisplay AI Chatbot Raspberry Pi 2 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 1280×960px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/whisplay_ai_chatbot_raspberry_pi_2.webp",
+    "width": 1280,
+    "height": 960,
+    "ratio": 1.333
+  },
+  {
+    "id": "whisplay_ai_chatbot_raspberry_pi_6",
+    "title": "Whisplay AI Chatbot Raspberry Pi 6",
+    "fileName": "whisplay_ai_chatbot_raspberry_pi_6.jpeg",
+    "source": "Pinterest reference",
+    "category": "Reference / Pinterest",
+    "tags": [
+      "whisplay",
+      "ai",
+      "chatbot",
+      "raspberry",
+      "pi",
+      "6.jpeg",
+      "reference",
+      "moodboard"
+    ],
+    "description": "Whisplay AI Chatbot Raspberry Pi 6 is a reference image for form, finish, and proportion rather than a production-ready object.",
+    "production": "Reference only: use this for silhouette, color, and proportion studies rather than a production route.",
+    "estCost": "Reference only",
+    "specs": [
+      "Treat the image as a visual benchmark for proportion and texture, not as a finished manufacturing spec.",
+      "Extract only the strongest cue: material contrast, edge treatment, or lighting behavior.",
+      "Aspect ratio is 1.33:1, so compositions should be tested for vertical or horizontal cropping."
+    ],
+    "notes": [
+      "Source image: 1280×960px",
+      "Folder: Award Concepts",
+      "Use as moodboard input when deciding finish, edge radius, or surface contrast."
+    ],
+    "src": "./pinterest/whisplay_ai_chatbot_raspberry_pi_6.jpeg",
+    "width": 1280,
+    "height": 960,
+    "ratio": 1.333
+  },
+  {
+    "id": "plant_terrarium_circuit_roots",
+    "title": "Plant Terrarium Circuit Roots",
+    "fileName": "plant_terrarium_circuit_roots.png",
+    "source": "Concept",
+    "category": "Plant / Terrarium",
+    "tags": [
+      "plant",
+      "terrarium",
+      "circuit",
+      "roots.png",
+      "organic",
+      "desk"
+    ],
+    "description": "Plant Terrarium Circuit Roots is a small glass planter concept that works best when moisture and breakage are controlled.",
+    "production": "Assemble from a stock glass vessel with preserved moss or low-maintenance plant material and a moisture-safe base.",
+    "estCost": "$18–$45/unit",
+    "specs": [
+      "Keep the vessel compact enough to sit beside a laptop without crowding the desk.",
+      "Seal or isolate the base so humidity does not creep into the presentation surface.",
+      "Use a packing scheme that holds the glass upright and prevents plant movement."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Preserved materials reduce maintenance and avoid live-plant shipping problems.",
+      "Moisture control and local sourcing matter more here than decorative complexity."
+    ],
+    "src": "./plant_terrarium_circuit_roots.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "potted_succulent_stem",
+    "title": "Potted Succulent Stem",
+    "fileName": "potted_succulent_stem.jpg",
+    "source": "Concept",
+    "category": "Plant / Terrarium",
+    "tags": [
+      "potted",
+      "succulent",
+      "stem.jpg",
+      "organic",
+      "desk"
+    ],
+    "description": "Potted Succulent Stem is a plant-forward desk piece that depends on fresh sourcing and careful local assembly.",
+    "production": "Use a local planter, a healthy succulent, and an engraved tag or stake assembled near the delivery point.",
+    "estCost": "$18–$45/unit",
+    "specs": [
+      "Choose a pot that drains cleanly and does not trap standing water.",
+      "Keep the plant height modest so the object reads as a desk accent instead of a centerpiece.",
+      "Use breathable packing that keeps the soil stable and the leaves uncrushed."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "Local assembly is the easiest way to keep the plant fresh and the pot intact.",
+      "Moisture control and local sourcing matter more here than decorative complexity."
+    ],
+    "src": "./potted_succulent_stem.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  },
+  {
+    "id": "realtime_partner_plaque",
+    "title": "Realtime Partner Plaque",
+    "fileName": "realtime_partner_plaque.png",
+    "source": "Concept",
+    "category": "Recognition / Award",
+    "tags": [
+      "realtime",
+      "partner",
+      "plaque.png",
+      "award",
+      "recognition",
+      "premium"
+    ],
+    "description": "Realtime Partner Plaque is a plaque-format award that depends on a crisp face, legible linework, and a clean presentation stand.",
+    "production": "Use a stock plaque blank in stone, ceramic, or aluminum, then add a crisp engraved or UV-printed face.",
+    "estCost": "$25–$65/unit",
+    "specs": [
+      "Keep the face around 6–8 in on the long side so the graphic reads from a desk.",
+      "Choose a flat engraving plane with enough margin for sponsor copy or schema lines.",
+      "Pair the plaque with a stable stand or hidden wall keyhole depending display context."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Fine lines and small type need a polished surface rather than rough cast texture.",
+      "Presentation packaging should keep corners, edges, and engraved faces free from abrasion."
+    ],
+    "src": "./realtime_partner_plaque.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "stacked_supabase_blocks",
+    "title": "Stacked Supabase Blocks",
+    "fileName": "stacked_supabase_blocks.png",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "stacked",
+      "supabase",
+      "blocks.png",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "Stacked Supabase Blocks is a layered desk sculpture that uses repeated blocks or forms to create depth and shadow.",
+    "production": "Assemble as a layered block sculpture in wood, resin, or composite material with hidden joinery.",
+    "estCost": "$35–$120/unit",
+    "specs": [
+      "Keep the layers visually distinct so the stack reads from across the room.",
+      "Hide fasteners or glue lines where possible to preserve the clean block geometry.",
+      "Add felt or rubber on the underside so the stack can sit safely on a desk."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Stacked forms work best when the gaps and shadows are intentional.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./stacked_supabase_blocks.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "supabase_desk_lamp_led_equalizer",
+    "title": "Supabase Desk Lamp LED Equalizer",
+    "fileName": "supabase_desk_lamp_led_equalizer.jpg",
+    "source": "Concept",
+    "category": "Lighting / Glow",
+    "tags": [
+      "supabase",
+      "desk",
+      "lamp",
+      "led",
+      "equalizer.jpg",
+      "glow"
+    ],
+    "description": "Supabase Desk Lamp LED Equalizer is a desk lamp concept shaped by brightness control, cable routing, and a calm glow.",
+    "production": "Build around a low-voltage LED source, a dimmable driver, and a stable base with a diffuser or reflector.",
+    "estCost": "$54–$94/unit",
+    "specs": [
+      "Keep the light source comfortable for a desk, not a room floodlight.",
+      "Make the power path serviceable with a replaceable cable or adapter.",
+      "Use a diffuser or reflector so the glow feels deliberate rather than harsh."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "Good lighting concepts feel calm in ambient rooms and readable in low light.",
+      "Cable routing and heat management should be proven before committing to an enclosure."
+    ],
+    "src": "./supabase_desk_lamp_led_equalizer.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  },
+  {
+    "id": "supabase_feature_tiles",
+    "title": "Supabase Feature Tiles",
+    "fileName": "supabase_feature_tiles.jpg",
+    "source": "Concept",
+    "category": "Display / Interface",
+    "tags": [
+      "supabase",
+      "feature",
+      "tiles.jpg",
+      "electronic",
+      "display",
+      "interactive"
+    ],
+    "description": "Supabase Feature Tiles is a modular information display that works as a set of repeatable visual tiles.",
+    "production": "Build as a set of engraved or printed display tiles mounted in a grid or frame-like carrier.",
+    "estCost": "$45–$150/unit",
+    "specs": [
+      "Keep every tile legible on its own so the system still works if viewed one panel at a time.",
+      "Use a repeatable tile size and spacing so the set feels designed rather than accidental.",
+      "Choose a finish that balances contrast and finger resistance for frequent handling."
+    ],
+    "notes": [
+      "Source image: 1168×784px",
+      "Folder: Award Concepts",
+      "This is a modular communication object, so consistency across tiles matters more than ornament.",
+      "Screen readability and service access are more important than a fully hidden hardware stack."
+    ],
+    "src": "./supabase_feature_tiles.jpg",
+    "width": 1168,
+    "height": 784,
+    "ratio": 1.49
+  },
+  {
+    "id": "supabase_newtons_cradle_chrome_green_balls",
+    "title": "Supabase Newtons Cradle Chrome Green Balls",
+    "fileName": "supabase_newtons_cradle_chrome_green_balls.jpg",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "supabase",
+      "newtons",
+      "cradle",
+      "chrome",
+      "green",
+      "balls.jpg",
+      "sculptural",
+      "collectible"
+    ],
+    "description": "Supabase Newtons Cradle Chrome Green Balls is a motion sculpture that needs clean physics, aligned spacing, and a stable frame.",
+    "production": "Use a machined or polished cradle frame with evenly spaced spheres and a rigid top bar.",
+    "estCost": "$35–$120/unit",
+    "specs": [
+      "Balance the hanging length so the balls contact cleanly without hitting the base.",
+      "Keep the chrome or green finish consistent across the balls and frame.",
+      "Assemble for repeatable motion; a bad cradle feels broken immediately."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "The physics have to be right before the object can serve as décor.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./supabase_newtons_cradle_chrome_green_balls.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  },
+  {
+    "id": "supabase_newtons_cradle_green_balls",
+    "title": "Supabase Newtons Cradle Green Balls",
+    "fileName": "supabase_newtons_cradle_green_balls.jpg",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "supabase",
+      "newtons",
+      "cradle",
+      "green",
+      "balls.jpg",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "Supabase Newtons Cradle Green Balls is a motion sculpture that needs clean physics, aligned spacing, and a stable frame.",
+    "production": "Use a machined or polished cradle frame with evenly spaced spheres and a rigid top bar.",
+    "estCost": "$35–$120/unit",
+    "specs": [
+      "Balance the hanging length so the balls contact cleanly without hitting the base.",
+      "Keep the chrome or green finish consistent across the balls and frame.",
+      "Assemble for repeatable motion; a bad cradle feels broken immediately."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "The physics have to be right before the object can serve as décor.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./supabase_newtons_cradle_green_balls.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  },
+  {
+    "id": "supabase_select_30_desk_artifact_ideas_poster",
+    "title": "Supabase Select 30 Desk Artifact Ideas Poster",
+    "fileName": "supabase_select_30_desk_artifact_ideas_poster.png",
+    "source": "Concept",
+    "category": "Poster / Brief",
+    "tags": [
+      "supabase",
+      "select",
+      "30",
+      "desk",
+      "artifact",
+      "ideas",
+      "poster.png",
+      "brief"
+    ],
+    "description": "Supabase Select 30 Desk Artifact Ideas Poster is a print-ready poster that should present the concept set with clear hierarchy and readable spacing.",
+    "production": "Lay out as a print-ready poster with strong hierarchy, then output on heavy matte stock or coated sheet.",
+    "estCost": "$8–$18/unit",
+    "specs": [
+      "Keep the grid readable from several feet so the sheet works as a wall brief or tabletop reference.",
+      "Preserve generous margins for trimming, framing, or pinning.",
+      "Use a proofed color palette so green accents do not drift on press."
+    ],
+    "notes": [
+      "Source image: 1536×1024px",
+      "Folder: Award Concepts",
+      "This should behave like a design artifact, not a temporary handout.",
+      "Proof the poster at actual size before print so the text hierarchy survives the final trim."
+    ],
+    "src": "./supabase_select_30_desk_artifact_ideas_poster.png",
+    "width": 1536,
+    "height": 1024,
+    "ratio": 1.5
+  },
+  {
+    "id": "supabase_select_cable_cleat_phone_stand_1",
+    "title": "Supabase Select Cable Cleat Phone Stand 1",
+    "fileName": "supabase_select_cable_cleat_phone_stand_1.png",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "supabase",
+      "select",
+      "cable",
+      "cleat",
+      "phone",
+      "stand",
+      "1.png",
+      "utility"
+    ],
+    "description": "Supabase Select Cable Cleat Phone Stand 1 is a phone stand concept centered on viewing angle, cable routing, and desk stability.",
+    "production": "Build as a metal phone stand with a fixed viewing angle, anti-slip feet, and a clean cable pass-through.",
+    "estCost": "$15–$40/unit",
+    "specs": [
+      "Keep the footprint small enough for a keyboard-and-mouse desk without crowding.",
+      "Use a slot angle that supports video calls and message reading without tipping the phone.",
+      "Finish the contact points with rubber, cork, or felt so the stand stays planted."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Best when the charge cable can route through the back without pinching.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./supabase_select_cable_cleat_phone_stand_1.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "supabase_select_ceramic_mug_wood_base_1",
+    "title": "Supabase Select Ceramic Mug Wood Base 1",
+    "fileName": "supabase_select_ceramic_mug_wood_base_1.png",
+    "source": "Concept",
+    "category": "Drinkware",
+    "tags": [
+      "supabase",
+      "select",
+      "ceramic",
+      "mug",
+      "wood",
+      "base",
+      "1.png",
+      "desk"
+    ],
+    "description": "Supabase Select Ceramic Mug Wood Base 1 is a premium mug concept that pairs a stock ceramic cup with a warm wood accent.",
+    "production": "Start from a stock ceramic mug blank, then add durable print, glaze-safe decoration, and an optional wood accent.",
+    "estCost": "$28–$35/unit",
+    "specs": [
+      "Aim for a 12–14 oz capacity so it feels like office drinkware rather than a novelty cup.",
+      "Keep the decoration off the lip and handle zones to preserve comfort and washability.",
+      "Use a wood base or lid only if it can be removed and repacked without chipping the mug."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Mugs work best when the decoration is durable and the packaging absorbs rim impacts.",
+      "If the object touches food or liquid, confirm the decoration and materials stay food-safe."
+    ],
+    "src": "./supabase_select_ceramic_mug_wood_base_1.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "supabase_select_felt_desk_mat",
+    "title": "Supabase Select Felt Desk Mat",
+    "fileName": "supabase_select_felt_desk_mat.jpg",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "supabase",
+      "select",
+      "felt",
+      "desk",
+      "mat.jpg",
+      "utility",
+      "functional"
+    ],
+    "description": "Supabase Select Felt Desk Mat is a desk-surface accessory that needs comfort, flatness, and a clean edge finish.",
+    "production": "Use a felt, PU leather, or textile surface with stitched edges and a non-slip underside.",
+    "estCost": "$15–$40/unit",
+    "specs": [
+      "Size should cover keyboard and mouse zones without hanging over a shallow desk edge.",
+      "Edge stitching or heat-sealed trim keeps the mat from fraying at the corners.",
+      "Include one subtle branding cue rather than filling the whole surface with print."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Mat thickness matters because it changes wrist comfort and the edge transition.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./supabase_select_felt_desk_mat.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "tall_green_desk_lamp",
+    "title": "Tall Green Desk Lamp",
+    "fileName": "tall_green_desk_lamp.jpg",
+    "source": "Concept",
+    "category": "Lighting / Glow",
+    "tags": [
+      "tall",
+      "green",
+      "desk",
+      "lamp.jpg",
+      "glow",
+      "led"
+    ],
+    "description": "Tall Green Desk Lamp is a desk lamp concept shaped by brightness control, cable routing, and a calm glow.",
+    "production": "Build around a low-voltage LED source, a dimmable driver, and a stable base with a diffuser or reflector.",
+    "estCost": "$30–$70/unit",
+    "specs": [
+      "Keep the light source comfortable for a desk, not a room floodlight.",
+      "Make the power path serviceable with a replaceable cable or adapter.",
+      "Use a diffuser or reflector so the glow feels deliberate rather than harsh."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "Good lighting concepts feel calm in ambient rooms and readable in low light.",
+      "Cable routing and heat management should be proven before committing to an enclosure."
+    ],
+    "src": "./tall_green_desk_lamp.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  },
+  {
+    "id": "wireless_charger_nfc",
+    "title": "Wireless Charger NFC",
+    "fileName": "wireless_charger_nfc.jpg",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "wireless",
+      "charger",
+      "nfc.jpg",
+      "utility",
+      "functional",
+      "desk"
+    ],
+    "description": "Wireless Charger NFC is a charging accessory that combines a tidy charging surface with a discreet electronics enclosure.",
+    "production": "Integrate a Qi module into a shallow desk accessory with heat ventilation and cable management.",
+    "estCost": "$51–$76/unit",
+    "specs": [
+      "Keep the charging surface flat and visible so users can place the phone quickly.",
+      "Hide the electronics in a serviceable cavity that can be opened without destroying the shell.",
+      "Test thermal rise during a 30–60 minute charge cycle before committing to volume."
+    ],
+    "notes": [
+      "Source image: 1024×559px",
+      "Folder: Award Concepts",
+      "Wireless power is only useful if the charging coil and phone alignment are obvious.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./wireless_charger_nfc.jpg",
+    "width": 1024,
+    "height": 559,
+    "ratio": 1.832
+  },
+  {
+    "id": "wireless_charging_desk_mat",
+    "title": "Wireless Charging Desk Mat",
+    "fileName": "wireless_charging_desk_mat.png",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "wireless",
+      "charging",
+      "desk",
+      "mat.png",
+      "utility",
+      "functional"
+    ],
+    "description": "Wireless Charging Desk Mat is a desk-surface accessory that needs comfort, flatness, and a clean edge finish.",
+    "production": "Use a felt, PU leather, or textile surface with stitched edges and a non-slip underside.",
+    "estCost": "$27–$52/unit",
+    "specs": [
+      "Size should cover keyboard and mouse zones without hanging over a shallow desk edge.",
+      "Edge stitching or heat-sealed trim keeps the mat from fraying at the corners.",
+      "Include one subtle branding cue rather than filling the whole surface with print."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "Mat thickness matters because it changes wrist comfort and the edge transition.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./wireless_charging_desk_mat.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "wood_block_metal_plate",
+    "title": "Wood Block Metal Plate",
+    "fileName": "wood_block_metal_plate.png",
+    "source": "Concept",
+    "category": "Sculpture / Object",
+    "tags": [
+      "wood",
+      "block",
+      "metal",
+      "plate.png",
+      "sculptural",
+      "collectible",
+      "desk"
+    ],
+    "description": "Wood Block Metal Plate is a compact award sculpture that combines warm wood grain with a precise metal face.",
+    "production": "CNC a hardwood block, route a pocket for the plate, and finish with an inset brushed metal face.",
+    "estCost": "$36–$48/unit",
+    "specs": [
+      "Target a compact monument format that sits flat and feels weighty in hand.",
+      "Keep the plate flush to avoid catching edges or creating shipping wear.",
+      "Use walnut, oak, or engineered stock depending the consistency you want across the run."
+    ],
+    "notes": [
+      "Source image: 1448×1086px",
+      "Folder: Award Concepts",
+      "This is the cleanest domestic fabrication path in the set and the easiest to scale.",
+      "The final piece should feel balanced in the hand even if it is viewed mostly on a desk or shelf."
+    ],
+    "src": "./wood_block_metal_plate.png",
+    "width": 1448,
+    "height": 1086,
+    "ratio": 1.333
+  },
+  {
+    "id": "wooden_phone_stand",
+    "title": "Wooden Phone Stand",
+    "fileName": "wooden_phone_stand.jpg",
+    "source": "Concept",
+    "category": "Desk Utility",
+    "tags": [
+      "wooden",
+      "phone",
+      "stand.jpg",
+      "utility",
+      "functional",
+      "desk"
+    ],
+    "description": "Wooden Phone Stand is a phone stand concept centered on viewing angle, cable routing, and desk stability.",
+    "production": "Build as a wood phone stand with a fixed viewing angle, anti-slip feet, and a clean cable pass-through.",
+    "estCost": "$21–$46/unit",
+    "specs": [
+      "Keep the footprint small enough for a keyboard-and-mouse desk without crowding.",
+      "Use a slot angle that supports video calls and message reading without tipping the phone.",
+      "Finish the contact points with rubber, cork, or felt so the stand stays planted."
+    ],
+    "notes": [
+      "Source image: 784×1168px",
+      "Folder: Award Concepts",
+      "Best when the charge cable can route through the back without pinching.",
+      "Utility pieces should be tested for one-handed use and cable or desk clutter interaction."
+    ],
+    "src": "./wooden_phone_stand.jpg",
+    "width": 784,
+    "height": 1168,
+    "ratio": 0.671
+  }
+]</script>
+<script>
+const ITEMS = JSON.parse(document.getElementById('items-data').textContent); const CATEGORY_COUNTS = Object.fromEntries([
+  [
+    "Desk Utility",
+    13
+  ],
+  [
+    "Sculpture / Object",
+    13
+  ],
+  [
+    "Reference / Pinterest",
+    11
+  ],
+  [
+    "Recognition / Award",
+    8
+  ],
+  [
+    "Plant / Terrarium",
+    6
+  ],
+  [
+    "Display / Interface",
+    5
+  ],
+  [
+    "Lighting / Glow",
+    5
+  ],
+  [
+    "Drinkware",
+    4
+  ],
+  [
+    "Poster / Brief",
+    1
+  ]
+]); const SUMMARY = {
+  "total": 66,
+  "concepts": 55,
+  "references": 11,
+  "categories": 9
+};
+const state = {query:'', source:'all', category:'all', sort:'recommended', view:'gallery', activeId: ITEMS[0]?.id ?? null, lightboxOpen:false, lastFocus:null};
+const el = {stats:document.getElementById('stats'),search:document.getElementById('search'),sourceFilter:document.getElementById('sourceFilter'),sortSelect:document.getElementById('sortSelect'),gridToggle:document.getElementById('gridToggle'),listToggle:document.getElementById('listToggle'),modeGallery:document.getElementById('modeGallery'),modeList:document.getElementById('modeList'),categoryStrip:document.getElementById('categoryStrip'),resultsCount:document.getElementById('resultsCount'),resultsMeta:document.getElementById('resultsMeta'),galleryWrap:document.getElementById('galleryWrap'),listWrap:document.getElementById('listWrap'),gallery:document.getElementById('gallery'),listBody:document.getElementById('listBody'),emptyState:document.getElementById('emptyState'),inspectorImage:document.getElementById('inspectorImage'),inspectorBody:document.getElementById('inspectorBody'),lightbox:document.getElementById('lightbox'),lightboxImage:document.getElementById('lightboxImage'),lightboxPanel:document.getElementById('lightboxPanel'),closeLightbox:document.getElementById('closeLightbox'),prevItem:document.getElementById('prevItem'),nextItem:document.getElementById('nextItem'),headers:document.querySelectorAll('thead th button[data-sort]')};
+const esc = (s) => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+const tone = (c) => c==='Desk Utility' ? 'green' : c==='Lighting / Glow' ? 'amber' : c==='Recognition / Award' ? 'purple' : '';
+const costValue = (i) => { const m = /^\$(\d+)–\$(\d+)/.exec(i.estCost); return m ? Number(m[1]) : 999; };
+function sortItems(list){ const arr=[...list]; switch(state.sort){ case 'title-asc': return arr.sort((a,b)=>a.title.localeCompare(b.title)); case 'category-asc': return arr.sort((a,b)=>a.category.localeCompare(b.category)||a.title.localeCompare(b.title)); case 'cost-asc': return arr.sort((a,b)=>costValue(a)-costValue(b)||a.title.localeCompare(b.title)); case 'cost-desc': return arr.sort((a,b)=>costValue(b)-costValue(a)||a.title.localeCompare(b.title)); case 'ratio-asc': return arr.sort((a,b)=>a.ratio-b.ratio||a.title.localeCompare(b.title)); case 'ratio-desc': return arr.sort((a,b)=>b.ratio-a.ratio||a.title.localeCompare(b.title)); default: return arr.sort((a,b)=>(a.source==='Concept'?0:1)-(b.source==='Concept'?0:1)||a.category.localeCompare(b.category)||a.title.localeCompare(b.title)); }}
+function visible(){ const q=state.query.trim().toLowerCase(); return sortItems(ITEMS.filter(i=>{ const hay=[i.title,i.category,i.source,i.description,i.production,i.estCost,i.fileName,i.specs.join(' '),i.notes.join(' '),i.tags.join(' ')].join(' ').toLowerCase(); return (!q||hay.includes(q)) && (state.source==='all'||i.source===state.source) && (state.category==='all'||i.category===state.category); })); }
+function active(list=visible()){ return list.find(i=>i.id===state.activeId) || list[0] || ITEMS[0] || null; }
+function renderStats(){ el.stats.innerHTML = [{v:SUMMARY.total,l:'images'},{v:SUMMARY.categories,l:'categories'},{v:SUMMARY.concepts,l:'concepts'},{v:SUMMARY.references,l:'references'}].map(i=>`<div class="stat"><b>${i.v}</b><span>${i.l}</span></div>`).join(''); }
+function renderCategoryStrip(){ const chips=[{category:'all',label:'All',count:ITEMS.length}, ...Object.entries(CATEGORY_COUNTS).map(([category,count])=>({category,label:category,count}))]; el.categoryStrip.innerHTML = chips.map(x=>`<button class="pill" data-category="${esc(x.category)}" data-active="${String(state.category===x.category)}">${esc(x.label)} <span class="count">${x.count}</span></button>`).join(''); el.categoryStrip.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>{ state.category=b.dataset.category; syncControls(); render(); })); }
+function syncControls(){ el.sourceFilter.value=state.source; el.sortSelect.value=state.sort; el.gridToggle.setAttribute('aria-pressed', String(state.view==='gallery')); el.listToggle.setAttribute('aria-pressed', String(state.view==='list')); el.modeGallery.setAttribute('aria-pressed', String(state.view==='gallery')); el.modeList.setAttribute('aria-pressed', String(state.view==='list')); el.categoryStrip.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('data-active', String(b.dataset.category===state.category))); }
+function renderGallery(list){ el.gallery.innerHTML = list.map((i,index)=>`<button class="card" type="button" data-id="${esc(i.id)}" aria-current="${String(i.id===state.activeId)}"><div class="thumb"><img src="${esc(i.src)}" alt="${esc(i.title)}" loading="lazy" decoding="async"></div><div class="cbody"><h3>${esc(i.title)}</h3><div class="meta"><span class="cat">${esc(i.category)}</span><span class="cost">${esc(i.estCost)}</span></div><div class="chips">${i.tags.slice(0,4).map(t=>`<span class="chip ${tone(i.category)}">${esc(t)}</span>`).join('')}</div></div></button>`).join(''); el.gallery.querySelectorAll('.card').forEach(b=>b.addEventListener('click',()=>openLightbox(b.dataset.id))); }
+function renderList(list){ el.listBody.innerHTML = list.map(i=>`<tr tabindex="0" role="button" data-id="${esc(i.id)}" class="${i.id===state.activeId?'current':''}"><td><div class="rtitle"><img class="rt" src="${esc(i.src)}" alt="${esc(i.title)}" loading="lazy" decoding="async"><div><strong>${esc(i.title)}</strong><div class="subt">${esc(i.source)} · ${esc(i.fileName)}</div></div></div></td><td>${esc(i.category)}</td><td>${esc(i.estCost)}</td><td>${esc(i.width)}×${esc(i.height)} · ${i.ratio.toFixed(2)}:1</td><td><div class="tabletags">${i.tags.slice(0,5).map(t=>`<span class="chip">${esc(t)}</span>`).join('')}</div></td></tr>`).join(''); el.listBody.querySelectorAll('tr').forEach(r=>{ r.addEventListener('click',()=>openLightbox(r.dataset.id)); r.addEventListener('keydown',(e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openLightbox(r.dataset.id); } }); }); }
+function renderInspector(item){ if(!item){ el.inspectorImage.removeAttribute('src'); el.inspectorBody.innerHTML = '<div><h2>No item selected</h2><p class="subtle">Use the gallery or list to inspect a concept.</p></div>'; return; } el.inspectorImage.src=item.src; el.inspectorImage.alt=item.title; el.inspectorBody.innerHTML = `<div><h2 style="margin:0 0 6px;letter-spacing:-.03em">${esc(item.title)}</h2><p class="subtle">${esc(item.description)}</p><div class="chips" style="margin-top:8px"><span class="chip ${tone(item.category)}">${esc(item.category)}</span><span class="chip">${esc(item.source)}</span><span class="chip">${esc(item.estCost)}</span></div></div><div class="ibox"><h4>Production details</h4><div class="subtle">${esc(item.production)}</div></div><div class="ibox"><h4>Specs</h4><dl class="kv">${item.specs.map((s,n)=>`<dt>Spec ${n+1}</dt><dd>${esc(s)}</dd>`).join('')}</dl></div><div class="ibox"><h4>Related info</h4><ul style="margin:0;padding-left:18px;color:var(--muted)">${item.notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></div><div class="ibox"><h4>Relative tags</h4><div class="chips">${item.tags.map(t=>`<span class="chip">${esc(t)}</span>`).join('')}</div></div><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="toggle" id="openFromInspector">Open lightbox</button><button class="toggle" id="clearFilters">Clear filter</button></div>`; document.getElementById('openFromInspector').onclick=()=>openLightbox(item.id); document.getElementById('clearFilters').onclick=()=>{ state.query=''; state.source='all'; state.category='all'; state.sort='recommended'; el.search.value=''; syncControls(); render(); }; }
+function renderResultsMeta(list){ const cats=[...new Set(list.map(i=>i.category))].slice(0,4); el.resultsMeta.innerHTML = cats.map(c=>`<span class="chip">${esc(c)}</span>`).join(' ') || '<span class="subtle">No category match</span>'; }
+function render(){ const list=visible(); if(!list.some(i=>i.id===state.activeId)) state.activeId=list[0]?.id ?? null; const item=active(list); el.resultsCount.textContent=String(list.length); renderResultsMeta(list); renderGallery(list); renderList(list); renderInspector(item); el.emptyState.hidden = list.length !== 0; el.galleryWrap.classList.toggle('active', state.view==='gallery'); el.listWrap.classList.toggle('active', state.view==='list'); el.galleryWrap.style.display = state.view==='gallery' ? 'block' : 'none'; el.listWrap.style.display = state.view==='list' ? 'block' : 'none'; syncControls(); if(state.lightboxOpen) renderLightbox(); }
+function openLightbox(id){ state.activeId=id; state.lightboxOpen=true; state.lastFocus=document.activeElement; document.body.style.overflow='hidden'; el.lightbox.hidden=false; el.lightbox.setAttribute('aria-hidden','false'); render(); renderLightbox(); el.closeLightbox.focus(); }
+function closeLightbox(){ state.lightboxOpen=false; document.body.style.overflow=''; el.lightbox.hidden=true; el.lightbox.setAttribute('aria-hidden','true'); if(state.lastFocus && state.lastFocus.focus) state.lastFocus.focus(); }
+function move(delta){ const list=visible(); if(!list.length) return; let idx=list.findIndex(i=>i.id===state.activeId); if(idx<0) idx=0; idx=(idx+delta+list.length)%list.length; state.activeId=list[idx].id; render(); }
+function renderLightbox(){ const list=visible(); const item=active(list); if(!item) return; el.lightboxImage.src=item.src; el.lightboxImage.alt=item.title; el.lightboxPanel.innerHTML = `<div class="ltop"><div><h3>${esc(item.title)}</h3><div class="chips" style="margin-top:10px"><span class="chip ${tone(item.category)}">${esc(item.category)}</span><span class="chip">${esc(item.source)}</span><span class="chip">${esc(item.estCost)}</span></div></div><div class="subtle">${list.findIndex(i=>i.id===item.id)+1} / ${list.length}</div></div><p class="subtle">${esc(item.description)}</p><div class="ibox"><h4>Production details</h4><div class="subtle">${esc(item.production)}</div></div><div class="ibox"><h4>Specs</h4><dl class="kv">${item.specs.map((s,n)=>`<dt>Spec ${n+1}</dt><dd>${esc(s)}</dd>`).join('')}</dl></div><div class="ibox"><h4>Related info</h4><ul style="margin:0;padding-left:18px;color:var(--muted)">${item.notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></div><div class="ibox"><h4>Relative tags</h4><div class="chips">${item.tags.map(t=>`<span class="chip">${esc(t)}</span>`).join('')}</div></div><div class="kbd">Use <code>Esc</code> to close, <code>←</code> and <code>→</code> to navigate, and <code>Home</code>/<code>End</code> to jump.</div>`; }
+
+el.search.addEventListener('input',()=>{state.query=el.search.value;render();}); el.sourceFilter.addEventListener('change',()=>{state.source=el.sourceFilter.value;render();}); el.sortSelect.addEventListener('change',()=>{state.sort=el.sortSelect.value;render();}); [el.gridToggle,el.modeGallery].forEach(b=>b.addEventListener('click',()=>{state.view='gallery';syncControls();render();})); [el.listToggle,el.modeList].forEach(b=>b.addEventListener('click',()=>{state.view='list';syncControls();render();})); el.closeLightbox.addEventListener('click',closeLightbox); el.prevItem.addEventListener('click',()=>move(-1)); el.nextItem.addEventListener('click',()=>move(1)); el.lightbox.addEventListener('click',e=>{ if(e.target===el.lightbox) closeLightbox(); }); document.addEventListener('keydown',e=>{ if(!state.lightboxOpen) return; if(e.key==='Escape'){e.preventDefault();closeLightbox();} else if(e.key==='ArrowRight'){e.preventDefault();move(1);} else if(e.key==='ArrowLeft'){e.preventDefault();move(-1);} else if(e.key==='Home'){e.preventDefault(); const list=visible(); if(list.length){ state.activeId=list[0].id; render(); }} else if(e.key==='End'){e.preventDefault(); const list=visible(); if(list.length){ state.activeId=list[list.length-1].id; render(); }} }); el.headers.forEach(b=>b.addEventListener('click',()=>{ state.sort=b.dataset.sort; el.sortSelect.value=state.sort; state.view='list'; render(); })); renderStats(); renderCategoryStrip(); syncControls(); render();
+</script></body></html>
