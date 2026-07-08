@@ -3266,48 +3266,11 @@
   }
 ]</script>
 <script>
-const ITEMS = JSON.parse(document.getElementById('items-data').textContent); const CATEGORY_COUNTS = Object.fromEntries([
-  [
-    "Desk Utility",
-    13
-  ],
-  [
-    "Sculpture / Object",
-    13
-  ],
-  [
-    "Reference / Pinterest",
-    11
-  ],
-  [
-    "Recognition / Award",
-    8
-  ],
-  [
-    "Plant / Terrarium",
-    6
-  ],
-  [
-    "Display / Interface",
-    5
-  ],
-  [
-    "Lighting / Glow",
-    5
-  ],
-  [
-    "Drinkware",
-    4
-  ],
-  [
-    "Poster / Brief",
-    1
-  ]
-]); const SUMMARY = {
-  "total": 66,
-  "concepts": 55,
-  "references": 11,
-  "categories": 9
+const ITEMS = JSON.parse(document.getElementById('items-data').textContent); const CATEGORY_COUNTS = ITEMS.reduce((acc, item) => ((acc[item.category] = (acc[item.category] || 0) + 1), acc), {}); const SUMMARY = {
+  "total": ITEMS.length,
+  "concepts": ITEMS.filter(i => i.source === 'Concept').length,
+  "references": ITEMS.filter(i => i.source === 'Pinterest reference').length,
+  "categories": Object.keys(CATEGORY_COUNTS).length
 };
 const state = {query:'', source:'all', category:'all', sort:'recommended', view:'gallery', activeId: ITEMS[0]?.id ?? null, lightboxOpen:false, lastFocus:null};
 const el = {stats:document.getElementById('stats'),search:document.getElementById('search'),sourceFilter:document.getElementById('sourceFilter'),sortSelect:document.getElementById('sortSelect'),gridToggle:document.getElementById('gridToggle'),listToggle:document.getElementById('listToggle'),modeGallery:document.getElementById('modeGallery'),modeList:document.getElementById('modeList'),categoryStrip:document.getElementById('categoryStrip'),resultsCount:document.getElementById('resultsCount'),resultsMeta:document.getElementById('resultsMeta'),galleryWrap:document.getElementById('galleryWrap'),listWrap:document.getElementById('listWrap'),gallery:document.getElementById('gallery'),listBody:document.getElementById('listBody'),emptyState:document.getElementById('emptyState'),inspectorImage:document.getElementById('inspectorImage'),inspectorBody:document.getElementById('inspectorBody'),lightbox:document.getElementById('lightbox'),lightboxImage:document.getElementById('lightboxImage'),lightboxPanel:document.getElementById('lightboxPanel'),closeLightbox:document.getElementById('closeLightbox'),prevItem:document.getElementById('prevItem'),nextItem:document.getElementById('nextItem'),headers:document.querySelectorAll('thead th button[data-sort]')};
